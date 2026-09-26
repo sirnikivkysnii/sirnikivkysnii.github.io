@@ -27,16 +27,31 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* --- заголовки: пословное появление --- */
 for (const el of document.querySelectorAll('.reveal-text')) {
-  const words = el.textContent.trim().split(/\s+/);
-  el.textContent = '';
-  words.forEach((word, i) => {
-    const span = document.createElement('span');
-    span.className = 'w';
-    span.style.setProperty('--d', `${i * 85}ms`);
-    span.textContent = word;
-    el.appendChild(span);
-    if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
-  });
+  let idx = 0;
+  const walk = (parent) => {
+    const kids = [...parent.childNodes];
+    for (const node of kids) {
+      if (node.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        for (const token of node.textContent.split(/(\s+)/)) {
+          if (!token) continue;
+          if (/^\s+$/.test(token)) {
+            frag.appendChild(document.createTextNode(' '));
+          } else {
+            const span = document.createElement('span');
+            span.className = 'w';
+            span.style.setProperty('--d', `${idx++ * 85}ms`);
+            span.textContent = token;
+            frag.appendChild(span);
+          }
+        }
+        parent.replaceChild(frag, node);
+      } else if (node.nodeType === 1) {
+        walk(node);
+      }
+    }
+  };
+  walk(el);
 }
 
 /* --- появление при скролле + счётчик цен --- */
