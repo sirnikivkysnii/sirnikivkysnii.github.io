@@ -44,10 +44,15 @@ body{
 
 h1,h2,h3{
   font-family:'Lora',Georgia,serif;
-  font-weight:600;line-height:1.06;letter-spacing:-.015em;
+  font-weight:600;letter-spacing:-.015em;
   word-spacing:.04em;
   text-wrap:balance;
 }
+/* Кириллица: р у д щ ц ф й — с выносными элементами.
+   1.06 наезжало нижними элементами на следующую строку. */
+h1{line-height:1.15}
+h2{line-height:1.18}
+h3{line-height:1.2}
 h2{font-size:clamp(1.9rem,5vw,2.7rem)}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:2px}
@@ -145,8 +150,8 @@ a{color:inherit}
 @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.25;transform:scale(.6)}}
 
 .hero h1{
-  font-size:clamp(2.5rem,9vw,5.6rem);
-  margin-bottom:1.6rem;font-weight:500;letter-spacing:-.02em;
+  font-size:clamp(2.5rem,9vw,5.3rem);
+  margin-bottom:1.3rem;font-weight:500;letter-spacing:-.02em;
 }
 .hero h1 em{
   font-style:italic;font-weight:500;color:var(--butter);
@@ -302,9 +307,9 @@ a{color:inherit}
 .panel:hover .panel-emoji{transform:scale(1.14) rotate(-8deg)}
 .panel h3{
   font-size:clamp(1.5rem,4vw,2.15rem);
-  margin-bottom:.5rem;font-weight:600;
+  margin-bottom:.6rem;font-weight:600;
 }
-.panel p{font-size:.93rem;opacity:.75;max-width:32ch;text-wrap:pretty}
+.panel p{font-size:.93rem;opacity:.82;max-width:32ch;text-wrap:pretty}
 
 /* ============ Р»РёРЅРµР№РєР°-СЂР°Р·РґРµР»РёС‚РµР»СЊ ============ */
 .rule{display:flex;align-items:center;gap:.9rem;max-width:1120px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
