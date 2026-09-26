@@ -156,6 +156,11 @@ a{color:inherit}
   font-size:clamp(1rem,2.3vw,1.12rem);
   color:rgba(251,246,238,.7);text-wrap:pretty;
 }
+.lead em{
+  font-family:'Lora',Georgia,serif;
+  font-style:italic;font-weight:600;
+  color:var(--butter);letter-spacing:-.01em;
+}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
 
 /* ---------- РїРµС‡Р°С‚СЊ ---------- */
