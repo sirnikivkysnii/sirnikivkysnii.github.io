@@ -1,5 +1,5 @@
-/* ============================================================
-   НАЧИНКА ВНУТРИ — bold editorial
+﻿/* ============================================================
+   РќРђР§РРќРљРђ Р’РќРЈРўР Р вЂ” bold editorial
    ============================================================ */
 
 :root{
@@ -43,9 +43,9 @@ body{
 }
 
 h1,h2,h3{
-  font-family:'Fraunces',Georgia,serif;
-  font-weight:600;line-height:1.02;letter-spacing:-.03em;
-  font-variation-settings:'SOFT' 20,'WONK' 1;
+  font-family:'Lora',Georgia,serif;
+  font-weight:600;line-height:1.06;letter-spacing:-.015em;
+  word-spacing:.04em;
   text-wrap:balance;
 }
 h2{font-size:clamp(1.9rem,5vw,2.7rem)}
@@ -54,7 +54,7 @@ a{color:inherit}
 
 .wrap{max-width:1120px;margin:0 auto;position:relative;z-index:2}
 
-/* ============ текстура ============ */
+/* ============ С‚РµРєСЃС‚СѓСЂР° ============ */
 .grain{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   opacity:.4;mix-blend-mode:overlay;
@@ -69,14 +69,14 @@ a{color:inherit}
   filter:blur(40px);
 }
 
-/* ============ полоса прокрутки ============ */
+/* ============ РїРѕР»РѕСЃР° РїСЂРѕРєСЂСѓС‚РєРё ============ */
 .progress{
   position:fixed;top:0;left:0;z-index:100;height:3px;width:100%;
   transform:scaleX(0);transform-origin:0 50%;
   background:linear-gradient(90deg,var(--butter),var(--terra));
 }
 
-/* ============ шапка ============ */
+/* ============ С€Р°РїРєР° ============ */
 .topbar{
   position:sticky;top:0;z-index:50;
   display:flex;align-items:center;gap:1.2rem;
@@ -90,9 +90,8 @@ a{color:inherit}
 @keyframes dropIn{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:none}}
 
 .logo{
-  font-family:'Fraunces',Georgia,serif;
+  font-family:'Lora',Georgia,serif;
   font-weight:700;font-size:1.08rem;text-decoration:none;letter-spacing:-.02em;
-  font-variation-settings:'SOFT' 20,'WONK' 1;
   color:var(--paper);white-space:nowrap;
 }
 .logo em{font-style:italic;color:var(--butter);font-weight:500}
@@ -125,7 +124,7 @@ a{color:inherit}
 }
 .ig-link svg{width:15px;height:15px;fill:currentColor}
 
-/* ============ HERO (тёмный) ============ */
+/* ============ HERO (С‚С‘РјРЅС‹Р№) ============ */
 .hero{
   position:relative;overflow:hidden;isolation:isolate;
   background:var(--ink);color:var(--paper);
@@ -147,11 +146,10 @@ a{color:inherit}
 
 .hero h1{
   font-size:clamp(2.5rem,9vw,5.6rem);
-  margin-bottom:1.6rem;font-weight:500;letter-spacing:-.042em;
+  margin-bottom:1.6rem;font-weight:500;letter-spacing:-.02em;
 }
 .hero h1 em{
   font-style:italic;font-weight:500;color:var(--butter);
-  font-variation-settings:'SOFT' 70,'WONK' 1;
 }
 .lead{
   max-width:50ch;margin:0 auto 2.4rem;
@@ -160,7 +158,7 @@ a{color:inherit}
 }
 .hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
 
-/* ---------- печать ---------- */
+/* ---------- РїРµС‡Р°С‚СЊ ---------- */
 .seal{
   position:absolute;z-index:1;
   top:50%;right:clamp(1rem,4vw,4rem);
@@ -174,7 +172,7 @@ a{color:inherit}
 .seal-text{fill:var(--butter);font-family:'Manrope',sans-serif;font-size:8.4px;font-weight:700;letter-spacing:.22em}
 @keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
 
-/* ---------- кнопки ---------- */
+/* ---------- РєРЅРѕРїРєРё ---------- */
 .btn{
   position:relative;overflow:hidden;
   display:inline-flex;align-items:center;justify-content:center;
@@ -199,7 +197,7 @@ a{color:inherit}
 .btn-ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper);transform:translateY(-3px)}
 .btn-lg{padding:1.05rem 2.2rem;font-size:1.02rem}
 
-/* ---------- факты ---------- */
+/* ---------- С„Р°РєС‚С‹ ---------- */
 .facts{
   list-style:none;
   display:flex;flex-wrap:wrap;justify-content:center;gap:0;
@@ -215,12 +213,12 @@ a{color:inherit}
 }
 .facts li:last-child{border-right:0}
 .facts b{
-  font-family:'Fraunces',Georgia,serif;
+  font-family:'Lora',Georgia,serif;
   font-size:1.7rem;font-weight:600;color:var(--butter);
   margin-right:.3rem;letter-spacing:-.02em;
 }
 
-/* ============ бегущая строка (масляная) ============ */
+/* ============ Р±РµРіСѓС‰Р°СЏ СЃС‚СЂРѕРєР° (РјР°СЃР»СЏРЅР°СЏ) ============ */
 .marquee{
   position:relative;overflow:hidden;
   background:var(--butter);
@@ -234,17 +232,16 @@ a{color:inherit}
   width:max-content;animation:slide 28s linear infinite;
 }
 .marquee span{
-  font-family:'Fraunces',Georgia,serif;
+  font-family:'Lora',Georgia,serif;
   font-size:clamp(.95rem,2.3vw,1.15rem);
   font-style:italic;font-weight:600;
   color:var(--ink);white-space:nowrap;
-  font-variation-settings:'SOFT' 40,'WONK' 1;
 }
 .marquee b{color:var(--terra);font-size:.9rem}
 @keyframes slide{to{transform:translateX(-50%)}}
 .marquee:hover .marquee-track{animation-play-state:paused}
 
-/* ============ секции ============ */
+/* ============ СЃРµРєС†РёРё ============ */
 .sec{padding:clamp(3.5rem,9vw,6rem) clamp(1.25rem,5vw,3rem);position:relative}
 
 .sec-head{
@@ -253,14 +250,14 @@ a{color:inherit}
   border-bottom:1px solid var(--line);
 }
 .sec-num{
-  font-family:'Fraunces',Georgia,serif;
+  font-family:'Lora',Georgia,serif;
   font-size:.95rem;font-weight:600;letter-spacing:.1em;
   color:var(--terra);padding-top:.45rem;flex:0 0 auto;
 }
 .sec-num::after{content:"";display:block;width:26px;height:1px;background:var(--terra);margin-top:.5rem;opacity:.5}
 .sub{color:var(--muted);margin-top:.6rem;max-width:52ch;font-size:.98rem;text-wrap:pretty}
 
-/* ============ ПАНЕЛИ НАЧИНОК ============ */
+/* ============ РџРђРќР•Р›Р РќРђР§РРќРћРљ ============ */
 .panels{
   display:grid;gap:1rem;
   grid-template-columns:repeat(2,1fr);
@@ -287,7 +284,7 @@ a{color:inherit}
 .panel-cocoa::after{border-color:rgba(251,246,238,.14)}
 
 .panel-num{
-  font-family:'Fraunces',Georgia,serif;
+  font-family:'Lora',Georgia,serif;
   font-size:.8rem;font-weight:600;letter-spacing:.2em;
   opacity:.5;margin-bottom:auto;
 }
@@ -304,7 +301,7 @@ a{color:inherit}
 }
 .panel p{font-size:.93rem;opacity:.75;max-width:32ch;text-wrap:pretty}
 
-/* ============ линейка-разделитель ============ */
+/* ============ Р»РёРЅРµР№РєР°-СЂР°Р·РґРµР»РёС‚РµР»СЊ ============ */
 .rule{display:flex;align-items:center;gap:.9rem;max-width:1120px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
 .rule i{
   flex:1;height:1px;
@@ -313,7 +310,7 @@ a{color:inherit}
 }
 .rule b{width:6px;height:6px;flex:0 0 auto;background:var(--terra);transform:rotate(45deg)}
 
-/* ============ НАБОРЫ (талоны) ============ */
+/* ============ РќРђР‘РћР Р« (С‚Р°Р»РѕРЅС‹) ============ */
 .sets{background:var(--paper-2);border-top:1px solid var(--line)}
 .slips{
   display:grid;gap:1.3rem;
@@ -333,14 +330,14 @@ a{color:inherit}
 .slip-head{display:flex;align-items:baseline;justify-content:center;gap:.8rem;flex-wrap:wrap}
 .slip-qty{font-size:.95rem;color:var(--muted);font-weight:600}
 .slip-qty b{
-  font-family:'Fraunces',Georgia,serif;
+  font-family:'Lora',Georgia,serif;
   font-size:2.9rem;font-weight:600;color:var(--ink);
-  margin-right:.25rem;letter-spacing:-.03em;
+  margin-right:.25rem;letter-spacing:-.015em;
   display:inline-block;transition:transform .4s var(--ease);
 }
 .slip:hover .slip-qty b{transform:scale(1.1)}
 .slip-price{
-  font-family:'Fraunces',Georgia,serif;
+  font-family:'Lora',Georgia,serif;
   font-size:1.5rem;font-weight:600;color:var(--terra);
   letter-spacing:-.02em;font-variant-numeric:tabular-nums;
 }
@@ -362,7 +359,7 @@ a{color:inherit}
   box-shadow:inset 0 0 0 1px rgba(180,82,46,.25);
 }
 
-/* ============ КАК ЗАКАЗАТЬ ============ */
+/* ============ РљРђРљ Р—РђРљРђР—РђРўР¬ ============ */
 .how{background:#fff;border-top:1px solid var(--line);--sec-bg:#fff}
 .steps{
   list-style:none;position:relative;
@@ -378,7 +375,7 @@ a{color:inherit}
 .steps li:hover{padding-left:.9rem;background:rgba(232,176,75,.08)}
 .step-num{
   flex:0 0 auto;z-index:1;
-  font-family:'Fraunces',Georgia,serif;
+  font-family:'Lora',Georgia,serif;
   font-size:1.05rem;font-weight:600;
   width:39px;height:39px;
   display:flex;align-items:center;justify-content:center;
@@ -395,7 +392,7 @@ a{color:inherit}
 .note a{color:var(--terra);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;transition:opacity .2s}
 .note a:hover{opacity:.7}
 
-/* ============ CTA (терракота) ============ */
+/* ============ CTA (С‚РµСЂСЂР°РєРѕС‚Р°) ============ */
 .cta{
   padding:clamp(3.5rem,9vw,6rem) clamp(1.25rem,5vw,3rem) clamp(4rem,10vw,7rem);
   background:var(--terra);color:var(--paper);
@@ -414,7 +411,7 @@ a{color:inherit}
 .cta-card h2{
   color:var(--paper);
   font-size:clamp(2.2rem,6.5vw,3.8rem);
-  margin-bottom:1rem;letter-spacing:-.04em;
+  margin-bottom:1rem;letter-spacing:-.02em;
 }
 .cta-card p{color:rgba(251,246,238,.82);max-width:42ch;margin:0 auto 2rem;font-size:1.05rem}
 .cta .btn-primary{background:var(--ink);color:var(--paper);box-shadow:0 6px 22px rgba(36,28,21,.32)}
@@ -423,7 +420,7 @@ a{color:inherit}
 .cta .btn-ghost:hover{background:var(--paper);color:var(--terra);border-color:var(--paper)}
 .cta .note{color:rgba(251,246,238,.62);margin-top:2.2rem}
 
-/* ============ подвал ============ */
+/* ============ РїРѕРґРІР°Р» ============ */
 footer{
   padding:2.4rem clamp(1.25rem,5vw,3rem);
   text-align:center;font-size:.82rem;
@@ -431,7 +428,7 @@ footer{
   border-top:1px solid var(--line-inv);
 }
 
-/* ============ плавающая кнопка ============ */
+/* ============ РїР»Р°РІР°СЋС‰Р°СЏ РєРЅРѕРїРєР° ============ */
 .fab{
   position:fixed;z-index:60;
   right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));
@@ -450,7 +447,7 @@ footer{
 @keyframes ring{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(1.32)}}
 @keyframes fabIn{from{opacity:0;transform:translateY(28px) scale(.7)}to{opacity:1;transform:none}}
 
-/* ============ появление ============ */
+/* ============ РїРѕСЏРІР»РµРЅРёРµ ============ */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 .w{display:inline-block;opacity:0;transform:translateY(55%) rotate(3deg);filter:blur(4px)}
@@ -460,7 +457,7 @@ footer{
   transition-delay:var(--d,0ms);
 }
 
-/* ============ адаптив ============ */
+/* ============ Р°РґР°РїС‚РёРІ ============ */
 @media (max-width:1080px){.seal{width:104px;height:104px;right:1rem;opacity:.7}}
 @media (max-width:900px){.seal{display:none}}
 @media (max-width:820px){
