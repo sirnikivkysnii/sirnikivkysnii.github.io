@@ -71,7 +71,8 @@ if (reduced) {
         if (!entry.isIntersecting) continue;
         const el = entry.target;
         el.classList.add('in');
-        if (el.dataset.count) countUp(el);
+        const price = el.dataset.count ? el : el.querySelector('[data-count]');
+        if (price) countUp(price);
         io.unobserve(el);
       }
     },
