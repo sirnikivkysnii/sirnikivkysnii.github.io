@@ -183,7 +183,7 @@ a{color:inherit}
 }
 .seal-ring{fill:none;stroke:var(--butter);stroke-width:1;opacity:.4}
 .seal-ring-in{stroke-dasharray:2 5;opacity:.45}
-.seal-text{fill:var(--butter);font-family:'Manrope',sans-serif;font-size:8.4px;font-weight:700;letter-spacing:.22em}
+.seal-text{fill:var(--butter);font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em}
 @keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
 
 /* ---------- РєРЅРѕРїРєРё ---------- */
