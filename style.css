@@ -142,17 +142,6 @@ a{color:inherit}
 }
 .hero-copy{min-width:0}
 
-.eyebrow{
-  display:inline-flex;align-items:center;gap:.55rem;
-  font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--butter);margin-bottom:1.8rem;
-}
-.eyebrow .dot{
-  width:6px;height:6px;border-radius:50%;background:var(--butter);
-  animation:blink 2.2s ease-in-out infinite;
-}
-@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.25;transform:scale(.6)}}
-
 .hero h1{
   font-size:clamp(2.5rem,9vw,5.3rem);
   margin-bottom:1.3rem;font-weight:500;letter-spacing:-.02em;
@@ -162,13 +151,8 @@ a{color:inherit}
 }
 .lead{
   max-width:50ch;margin:0 auto 2.4rem;
-  font-size:clamp(1rem,2.3vw,1.12rem);
+  font-size:clamp(1.05rem,2.3vw,1.18rem);
   color:rgba(251,246,238,.7);text-wrap:pretty;
-}
-.lead em{
-  font-family:'Lora',Georgia,serif;
-  font-style:italic;font-weight:600;
-  color:var(--butter);letter-spacing:-.01em;
 }
 .hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
 
